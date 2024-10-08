@@ -39,11 +39,11 @@ $ air -c .air.toml
 #### Supervisord 起動
 
 ```bash
-# systemctl で管理している場合
+# systemd で管理している場合
 $ sudo systemctl start supervisor
 $ sudo systemctl enable supervisor
 
-# systemctl で管理していない場合
+# systemd で管理していない場合
 $ sudo supervisord -c /etc/supervisord.conf
 ```
 
@@ -51,10 +51,10 @@ $ sudo supervisord -c /etc/supervisord.conf
 #### Supervisord 停止
 
 ```bash
-# systemctl で管理している場合
+# systemd で管理している場合
 $ sudo systemctl stop supervisor
 
-# systemctl で管理していない場合
+# systemd で管理していない場合
 $ sudo supervisorctl shutdown
 ```
 

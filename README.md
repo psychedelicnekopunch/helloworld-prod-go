@@ -36,6 +36,14 @@ $ air -c .air.toml
 
 ### Supervisord
 
+#### ログ
+
+```bash
+$ cd /var/log
+$ sudo mkdir supervisor
+```
+
+
 #### Supervisord 起動
 
 ```bash

@@ -75,9 +75,23 @@ $ sudo supervisorctl start helloworld-prod-go
 ```
 
 
+#### プロダクト再起動
+
+```bash
+$ sudo supervisorctl reload helloworld-prod-go
+```
+
+
 #### プロダクト停止
 
 ```bash
 $ sudo supervisorctl stop helloworld-prod-go
+```
+
+
+#### プロダクト削除
+
+```bash
+$ sudo supervisorctl rempve helloworld-prod-go
 ```
 

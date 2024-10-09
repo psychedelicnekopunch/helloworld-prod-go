@@ -5,7 +5,7 @@ services:
     helloworld-prod-go-app:
         depends_on:
             - helloworld-prod-go-go
-        image: nginx:1
+        image: nginx:1.27.2
         volumes:
             - ./app:/var/www/html
             - ./nginx/default.conf:/etc/nginx/conf.d/default.conf

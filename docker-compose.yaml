@@ -1,6 +1,4 @@
 
-version: "3"
-
 services:
     helloworld-prod-go-app:
         depends_on:

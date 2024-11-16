@@ -1,1 +1,50 @@
+# 起動するはするが、 activating 状態から active になるまでの時間が非常に長い
+
+# from supervisor in yum
+#[Unit]
+#Description=Process Monitoring and Control Daemon
+#After=rc-local.service nss-user-lookup.target
+
+#[Service]
+#Type=forking
+#ExecStart=/usr/local/bin/supervisord -c /etc/supervisord.conf
+
+#[Install]
+#WantedBy=multi-user.target
+
+
+# https://github.com/zokeber/supervisor-systemd/blob/master/etc/systemd/system/supervisord.service
+#[Unit]
+#Description=Supervisor process control system for UNIX
+#Documentation=http://supervisord.org
+#After=network.target
+
+#[Service]
+#ExecStart=/usr/local/bin/supervisord -n -c /etc/supervisor/supervisord.conf
+#ExecStop=/usr/local/bin/supervisorctl $OPTIONS shutdown
+#ExecReload=/usr/local/bin/supervisorctl $OPTIONS reload
+#KillMode=process
+#Restart=on-failure
+#RestartSec=50s
+
+#[Install]
+#WantedBy=multi-user.target
+
+
+#[Unit]
+#Description=Supervisor process control system for UNIX
+#Documentation=http://supervisord.org
+#After=network.target rc-local.service nss-user-lookup.target syslog.target
+
+#[Service]
+#Type=forking
+#ExecStart=/usr/local/bin/supervisord -n -c /etc/supervisor/supervisord.conf
+#ExecStop=/usr/local/bin/supervisorctl $OPTIONS shutdown
+#ExecReload=/usr/local/bin/supervisorctl $OPTIONS reload
+#KillMode=process
+#Restart=on-failure
+#RestartSec=50s
+
+#[Install]
+#WantedBy=multi-user.target
 

@@ -85,7 +85,7 @@ $ sudo supervisorctl start helloworld-prod-go
 #### プロダクト再起動
 
 ```bash
-$ sudo supervisorctl reload helloworld-prod-go
+$ sudo supervisorctl restart helloworld-prod-go
 ```
 
 

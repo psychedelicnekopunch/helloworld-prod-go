@@ -1,4 +1,4 @@
-module github.com/docker-sample
+module github.com/psychedelicnekopunch/helloworld-prod-go
 
 go 1.19
 

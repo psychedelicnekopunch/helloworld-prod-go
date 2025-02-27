@@ -56,6 +56,13 @@ $ sudo supervisord -c /etc/supervisord.conf
 ```
 
 
+#### Supervisord 再起動
+
+```bash
+$ sudo supervisorctl reload
+```
+
+
 #### Supervisord 停止
 
 ```bash
@@ -92,6 +99,6 @@ $ sudo supervisorctl stop helloworld-prod-go
 #### プロダクト削除
 
 ```bash
-$ sudo supervisorctl rempve helloworld-prod-go
+$ sudo supervisorctl remove helloworld-prod-go
 ```
 

@@ -1,5 +1,5 @@
 # https://hub.docker.com/_/golang
-FROM golang:1.23.2
+FROM golang:1.27.3
 
 RUN go install github.com/air-verse/air@latest
 

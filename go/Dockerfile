@@ -3,4 +3,5 @@ FROM golang:1.27.3
 
 RUN go install github.com/air-verse/air@latest
 
-CMD ["air", "-c", ".air.toml"]
+# CMD ["air", "-c", ".air.toml"]
+CMD ["sh", "build/docker/dev.sh"]
